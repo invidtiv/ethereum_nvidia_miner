@@ -28,10 +28,12 @@ do
 		nvidia-settings -a "[gpu:$MY_DEVICE]/GPUGraphicsClockOffset[3]=$MY_CLOCK"
 		# Memory clock
 		nvidia-settings -a "[gpu:$MY_DEVICE]/GPUMemoryTransferRateOffset[3]=$MY_MEM"
-                # Set watt/powerlimit. This is also set in miner.sh at autostart.
-                sudo nvidia-smi -i "$MY_DEVICE" -pl "$MY_WATT"
+               
+               
 	fi
 done
+# Set watt/powerlimit for all GPU.
+sudo nvidia-smi -pl "$MY_WATT"
 
 echo
 echo "Done"
