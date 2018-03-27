@@ -37,7 +37,7 @@ export CUDA_DEVICE_ORDER=PCI_BUS_ID
 # ethminer
 # https://github.com/ethereum-mining/ethminer
 # Use -G (opencl) or -U (cuda) flag to select GPU platform.
-~/ethereum-mining/ethminer/build/ethminer/ethminer --farm-recheck 10000 -U -S "eu1.ethermine.org:4444" -FS "us1.ethermine.org:4444" -O "$MY_ADDRESS.$MY_RIG"
+~/ethereum-mining/ethminer/build/ethminer/ethminer -U -P stratum+tcp://"$MY_ADDRESS.$MY_RIG"@eu1.ethermine.org:4444 
 
 # Claymore's Dual Ethereum+Decred AMD+NVIDIA GPU Miner
 # https://github.com/nanopool/Claymore-Dual-Miner
